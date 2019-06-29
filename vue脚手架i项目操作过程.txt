@@ -1,0 +1,79 @@
+1.first.vue 中设置内容，同时导出组件；
+2.App.vue中导入first.vue组件，同时声明组件；
+3.设置second组件，导入到App.vue中；
+4.讲解home组件练习；
+将first和second加载到home组件中，
+然后在App.vue 中使用home组件
+
+5.路由配置文件夹router下的index.js中配置路径即可；
+6.此时将home组件显示到App.vue界面中；
+
+7.进入vue.js官网   找到动态学习下的vuex；使组件之间相互传值；
+首先：  cnpm install vuex --save
+8.查看package.json 文件中是否添加；
+9.main.js中导入vuex;
+10.讲解vuex是什么；
+11.vuex编程设计思路 —— 设置个共享的data供多个组件使用，达到交互的作用；
+12.开始当中   安装 Vuex 之后，让我们来创建一个 store   拷贝代码；
+拷贝到main.js中
+13.讲解state；
+14.vue实例中注入store存储器；
+15.进入first.vue中使用该存储器中store中的值； second.vue中使用state中的值；
+16.讲解 Mutation 如何修改；
+17.first.vue中提交修改；
+18.main.js中注释store，同时添加递减的方法；
+19.first.vue中添加按钮点击减少的方法；
+20.first.vue点击累加中添加附加参数，main.js中可以接收到！
+21.main.js修改store中，可以通过传对象接收多个值；
+22.a  可以在main.js中的store存储器中添加多个状态值，例如count2.。。
+22.讲解文档中的state模块中的  mapstate辅助函数； 在first.vue中使用辅助函数，解决计算属性冗余问题；
+23.辅助函数的几种用法；
+24.如果该组件中有属于自己使用的计算属性，如何解决？不是state传递过来的共享参数；
+在second.vue中来处理使用自己的计算属性；
+
+25.讲解vuex官网中的Getter；
+26.main.js中在store存储器中，设置getters；
+27.创建third.vue 在App.vue中路由跳转出来；
+28.index.js中配置third.vue路由；
+29.在Home.vue组件中使用third.vue跳转；
+
+30.mapMutation 辅助函数  优化在组件中提交commit调用store中的mutations方法；
+31.Mutation 必须是同步函数；Action 处理异步操作；
+32.在main.js中讲解action；
+33.讲解组件中调用action当中方法的传参操作；
+34.讲解vuex中的项目结构；   优化代码，把store存储器代码放在src统计目录下的store文件夹中；
+35.新建一个vue项目来测试；或者重命名main.js文件测试； 重命名main.js为main-未封装vuex.js，同时创建一个main.js，拷贝之前的代码；在src下创建一个文件夹为strore,下层级创建index.js作为入口文件；
+36.store文件夹中创建  状态 state.js 模块化管理store中的所有状态；
+37.同样的思路，将getters，mutions，action分别模块化管理，创建对应的js模块文件；然后导出，引入到index.js中；
+38.讲解assets文件夹，存储图片； 不过实际开发过程中，我们可以在components中创建单个页面的文件将夹，同时创建img图片文件夹；
+39.登陆阿里妈妈图标库；
+40.person.vue中使用v-for遍历创建图片的路径问题处理；
+41.使用模块化管理方式，加载本地图片；
+42.浏览器当中，右键查看img路径，是一个变量存储的资源；
+43.其它编译工具中，创建一个index文件，讲解base64位图片资源；
+44.package.json 文件中讲解打包    build 指令   整个项目中，右键在终端中打开； npm run build
+打包之后，文件在dist文件夹当中，都是能识别的css，js以及html文件；
+45.右键打开打包好的html文件，会报错，原因是必须放在服务器路径下去访问，才能识别/是当前路径；
+46.或者打开html文件修改几个路径即可；  /static 前面加.即可   服务器路径下是可以使用/找到当前目录，但是本地不行；  也可以在打包之前，找到config文件夹下的index.js里的build，修改static前面添加路径/为./ 不过，也没必要，因为给打包好项目之后，给后台，服务器下是可以访问的；然后可以把打包好的dist文件夹删掉，再次打包测试即可；
+
+47.src会参与打包，不过同级的static中，属于静态文件，如果想原样输出，不更改，可以放在此文件夹下；static当中存储的css，js以及img图片可以在js当中使用相对路径访问，因为打包之后，不丢失文件；
+48.安装路径提示插件   Path Autocomplete；
+49.vue当中如何使用插件；UI组件；
+50.找到滑块组件中的spa，单页面使用；
+51.直接去swiper.js中去使用，按钮如何添加事件；然后添加该vue中即可；
+52.对于该插件的所有参数参照swiper.js文档中的参数即可；
+53.element UI  插件讲解；
+
+饿了么   github 仓库地址  https://www.vue-js.com/topic/5b9699fccd6b2d5e4fd9e53e
+json在线解析   高亮
+
+实用库中  vue-axios 组件
+如果不是在vue脚手架模块中使用axios.js本地文件即可；
+在线get/post请求接口；
+也可以在后台管理系统里面录数据；
+resize.js  根据浏览器尺寸，设置字体大小；
+还有做项目之前，使用reset.css重置文件;
+
+
+
+
